@@ -1,0 +1,720 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+    <meta charset="UTF-8">
+
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>JP Veículos | Mobilidade Elétrica</title>
+
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="icon" type="image/png" href="assets/icons/favicon.ico">
+</head>
+
+<body>
+
+    <!-- CABEÇALHO -->
+    <header class="header">
+
+        <div class="container header-container">
+
+            <!-- LOGO -->
+            <a href="#inicio" class="logo">
+                <img src="assets/img/logo/logo.png" alt="JP Veículos">
+            </a>
+
+            <!-- NAVEGAÇÃO -->
+            <nav class="nav" id="nav">
+                <a href="#inicio">Início</a>
+                <a href="#destaques">Destaques</a>
+                <a href="#catalogo">Modelos</a>
+                <a href="#sobre">Sobre nós</a>
+                <a href="#contato">Contato</a>
+
+            </nav>
+
+            <!-- WHATSAPP -->
+            <a href="https://wa.me/553898941134" target="_blank" rel="noopener noreferrer" class="btn-header">
+                Fale conosco
+            </a>
+
+            <!-- MENU MOBILE -->
+            <button class="menu-toggle" id="menu-toggle" type="button" aria-label="Abrir menu" aria-expanded="false"
+                aria-controls="nav">
+                ☰
+            </button>
+
+        </div>
+
+    </header>
+
+
+    <main id="inicio">
+
+        <!-- =========================
+                        HERO
+            ========================= -->
+        <section class="hero">
+
+            <div class="container hero-container">
+
+                <!-- CONTEÚDO -->
+                <div class="hero-content">
+
+                    <span class="hero-tag">
+                        ⚡ Mobilidade elétrica
+                    </span>
+
+                    <h1>
+                        Seu próximo caminho
+                        começa <span>elétrico.</span>
+                    </h1>
+
+                    <p>
+                        Tecnologia, economia e mobilidade para transformar
+                        a maneira como você se movimenta.
+                    </p>
+
+                    <div class="hero-buttons">
+
+                        <a href="#catalogo" class="btn-primary">
+                            Ver modelos
+                        </a>
+
+                        <a href="https://wa.me/553898941134?text=Ol%C3%A1%21%20Vim%20pelo%20site%20da%20JP%20Ve%C3%ADculos%20e%20gostaria%20de%20solicitar%20um%20or%C3%A7amento."
+                            target="_blank" rel="noopener noreferrer" class="btn-secondary">
+                            Solicitar orçamento
+                        </a>
+
+                    </div>
+
+                    <div class="hero-beneficios">
+
+                        <div class="hero-beneficio">
+                            <span>⚡</span>
+                            <p>
+                                Mobilidade<br>
+                                <strong>100% elétrica</strong>
+                            </p>
+                        </div>
+
+                        <div class="hero-beneficio">
+                            <span>🔋</span>
+                            <p>
+                                Mais economia<br>
+                                <strong>no dia a dia</strong>
+                            </p>
+                        </div>
+
+                        <div class="hero-beneficio">
+                            <span>💬</span>
+                            <p>
+                                Atendimento<br>
+                                <strong>pelo WhatsApp</strong>
+                            </p>
+                        </div>
+
+                    </div>
+
+                </div>
+
+                <!-- VEÍCULO EM DESTAQUE -->
+                <div class="hero-image">
+
+                    <!-- Efeito de luz atrás do veículo -->
+                    <div class="hero-glow"></div>
+                    <div class="hero-ring"></div>
+
+                    <!-- Informação superior -->
+                    <div class="hero-spec hero-spec-autonomia">
+                        <span>AUTONOMIA</span>
+                        <strong>Até 60 km</strong>
+                    </div>
+
+                    <!-- Veículo -->
+                    <img src="assets/img/produtos/p7.png" alt="JP Veículos">
+
+                    <!-- Informações inferiores -->
+                    <div class="hero-vehicle-specs">
+
+                        <div>
+                            <span>⚡ POTÊNCIA</span>
+                            <strong>800W</strong>
+                        </div>
+
+                        <div>
+                            <span>🔋 BATERIA</span>
+                            <strong>Lítio removível</strong>
+                        </div>
+
+                    </div>
+
+                </div>
+
+            </div>
+
+        </section>
+
+        <!-- =========================
+                MODELOS EM DESTAQUE
+            ========================= -->
+
+        <section class="destaques" id="destaques">
+
+            <div class="container">
+
+                <div class="section-header">
+
+                    <span class="section-tag">
+                        Destaques JP
+                    </span>
+
+                    <h2>
+                        Encontre o elétrico
+                        ideal para você.
+                    </h2>
+
+                    <p>
+                        Conheça alguns dos modelos disponíveis
+                        e encontre a melhor opção para o seu dia a dia.
+                    </p>
+
+                </div>
+
+
+                <!-- CARROSSEL DE DESTAQUES -->
+                <div class="destaques-carrossel">
+
+                    <!-- SETA ESQUERDA -->
+                    <button class="destaque-seta destaque-seta-esquerda" id="destaque-anterior" type="button"
+                        aria-label="Ver destaques anteriores">
+                        &#10094;
+                    </button>
+
+                    <!-- ÁREA VISÍVEL DO CARROSSEL -->
+                    <div class="destaques-viewport">
+
+                        <div class="produtos-grid destaques-track" id="produtos-destaque"></div>
+
+                    </div>
+
+                    <!-- SETA DIREITA -->
+                    <button class="destaque-seta destaque-seta-direita" id="destaque-proximo" type="button"
+                        aria-label="Ver próximos destaques">
+                        &#10095;
+                    </button>
+
+                </div>
+
+                <!-- INDICADORES -->
+                <div class="destaques-indicadores" id="destaques-indicadores">
+                    <button class="destaque-indicador ativo" type="button" data-pagina="0"
+                        aria-label="Primeiro grupo de destaques"></button>
+
+                    <button class="destaque-indicador" type="button" data-pagina="1"
+                        aria-label="Segundo grupo de destaques"></button>
+                </div>
+
+            </div>
+
+            <!-- =========================
+                    CONDIÇÕES ESPECIAIS
+                ========================= -->
+
+            <section class="atacado">
+                <div class="container atacado-container">
+
+                    <div class="atacado-conteudo">
+                        <span class="atacado-tag">⚡ CONDIÇÕES ESPECIAIS PARA ATACADO </span>
+
+                        <h2>Compre com mais desconto e economize!</h2>
+
+                        <p>
+                            Vai comprar veículos elétricos em quantidade?
+                            Consulte nossas condições especiais para sua compra.
+                        </p>
+                    </div>
+
+                    <a href="https://wa.me/553898941134?text=Ol%C3%A1%21%20Vim%20pelo%20site%20da%20JP%20Ve%C3%ADculos%20e%20gostaria%20de%20consultar%20as%20condi%C3%A7%C3%B5es%20para%20comprar%203%20ou%20mais%20ve%C3%ADculos%20el%C3%A9tricos."
+                        target="_blank" rel="noopener noreferrer" class="atacado-btn">
+                        Consultar condições especiais →
+                    </a>
+
+                </div>
+            </section>
+
+
+        </section>
+
+        <!-- =========================
+                CATÁLOGO
+        ========================= -->
+
+        <section class="catalogo" id="catalogo">
+
+            <div class="container">
+
+                <div class="section-header">
+
+                    <span class="section-tag">
+                        Nossos modelos
+                    </span>
+
+                    <h2>
+                        Escolha o modelo
+                        ideal para você.
+                    </h2>
+
+                    <p>
+                        Explore nossa linha de veículos elétricos
+                        e encontre a opção que combina com a sua rotina.
+                    </p>
+
+                </div>
+
+                <div class="catalogo-pesquisa">
+
+                    <span class="pesquisa-icone">
+                        🔎
+                    </span>
+
+                    <input type="search" id="pesquisa-produto" placeholder="Pesquisar modelo..." autocomplete="off"
+                        aria-label="Pesquisar modelo">
+
+                </div>
+
+                <!-- FILTROS -->
+                <div class="catalogo-filtros">
+
+                    <button class="filtro-btn ativo" data-categoria="todos" type="button">
+                        Todos
+                    </button>
+
+                    <button class="filtro-btn" data-categoria="triciclos" type="button">
+                        Triciclos
+                    </button>
+
+                    <button class="filtro-btn" data-categoria="quadriciclos" type="button">
+                        Quadríciclos
+                    </button>
+
+                    <button class="filtro-btn" data-categoria="scooters" type="button">
+                        Scooters
+                    </button>
+
+                    <button class="filtro-btn" data-categoria="bicicletas" type="button">
+                        Bicicletas
+                    </button>
+
+                    <button class="filtro-btn" data-categoria="patinetes" type="button">
+                        Patinetes
+                    </button>
+
+                </div>
+
+                <!-- PRODUTOS -->
+                <div class="produtos-grid" id="produtos-catalogo">
+                </div>
+
+            </div>
+
+        </section>
+
+        <!-- =========================
+            SOBRE NÓS
+        ========================= -->
+
+        <section class="sobre" id="sobre">
+
+            <div class="container sobre-container">
+
+                <!-- CONTEÚDO -->
+                <div class="sobre-content">
+
+                    <span class="section-tag">
+                        Sobre a JP Veículos
+                    </span>
+
+                    <h2>
+                        Mobilidade elétrica para
+                        <span>transformar seu caminho.</span>
+                    </h2>
+
+                    <p>
+                        Na JP Veículos, buscamos oferecer soluções modernas
+                        de mobilidade elétrica para quem procura economia,
+                        praticidade e tecnologia no dia a dia.
+                    </p>
+
+                    <p>
+                        Trabalhamos com diferentes modelos de veículos elétricos,
+                        ajudando cada cliente a encontrar a opção que melhor
+                        combina com sua necessidade e sua rotina.
+                    </p>
+
+                    <div class="sobre-beneficios">
+
+                        <div class="sobre-beneficio">
+                            <span>⚡</span>
+
+                            <div>
+                                <strong>Mobilidade elétrica</strong>
+                                <p>Economia e praticidade para o seu dia a dia.</p>
+                            </div>
+                        </div>
+
+                        <div class="sobre-beneficio">
+                            <span>🔋</span>
+
+                            <div>
+                                <strong>Modelos para diferentes necessidades</strong>
+                                <p>Opções para encontrar o veículo ideal para você.</p>
+                            </div>
+                        </div>
+
+                        <div class="sobre-beneficio">
+                            <span>💬</span>
+
+                            <div>
+                                <strong>Atendimento personalizado</strong>
+                                <p>Tire suas dúvidas diretamente pelo WhatsApp.</p>
+                            </div>
+                        </div>
+
+                    </div>
+
+                    <a href="https://wa.me/553898941134" target="_blank" rel="noopener noreferrer" class="btn-sobre">
+                        Falar com a JP Veículos
+                    </a>
+
+                </div>
+
+                <!-- ÁREA VISUAL -->
+                <div class="sobre-visual">
+
+                    <div class="sobre-card">
+
+                        <span class="sobre-card-icon">⚡</span>
+
+                        <span class="sobre-card-tag">
+                            JP VEÍCULOS
+                        </span>
+
+                        <h3>
+                            O futuro da mobilidade
+                            já começou.
+                        </h3>
+
+                        <p>
+                            Tecnologia, economia e novas possibilidades
+                            para se movimentar.
+                        </p>
+
+                    </div>
+
+                </div>
+
+            </div>
+
+        </section>
+
+        <!-- =========================
+                CONTATO
+        ========================= -->
+
+        <section class="contato" id="contato">
+
+            <div class="container">
+
+                <div class="contato-header">
+
+                    <span class="section-tag">
+                        Entre em contato
+                    </span>
+
+                    <h2>
+                        Fale com a <span>JP Veículos.</span>
+                    </h2>
+
+                    <p>
+                        Tem interesse em algum dos nossos modelos?
+                        Nossa equipe está pronta para tirar suas dúvidas
+                        e ajudar você a encontrar a melhor opção.
+                    </p>
+
+                </div>
+
+
+                <div class="contato-container">
+
+                    <!-- INFORMAÇÕES -->
+                    <div class="contato-infos">
+
+                        <!-- WHATSAPP -->
+                        <a href="https://wa.me/553898941134" target="_blank" rel="noopener noreferrer"
+                            class="contato-item">
+                            <div class="contato-icone">
+                                💬
+                            </div>
+
+                            <div>
+                                <span>WhatsApp</span>
+                                <strong>(38) 9894-1134</strong>
+                                <p>Fale diretamente com nossa equipe.</p>
+                            </div>
+                        </a>
+
+
+                        <!-- INSTAGRAM -->
+                        <a href="https://www.instagram.com/veiculosjp.bm/" target="_blank" rel="noopener noreferrer"
+                            class="contato-item">
+                            <div class="contato-icone">
+                                📱
+                            </div>
+
+                            <div>
+                                <span>Instagram</span>
+                                <strong>@veiculosjp.bm</strong>
+                                <p>Acompanhe novidades e modelos.</p>
+                            </div>
+                        </a>
+
+
+                        <!-- ENDEREÇO -->
+                        <div class="contato-item">
+
+                            <div class="contato-icone">
+                                📍
+                            </div>
+
+                            <div>
+                                <span>Onde estamos</span>
+
+                                <strong>
+                                    Av. Bias Fortes, 174 - Centro
+                                </strong>
+
+                                <p>
+                                    Brasília de Minas - MG<br>
+                                    CEP 39330-000
+                                </p>
+                            </div>
+
+                        </div>
+
+                    </div>
+
+
+                    <!-- CARD PRINCIPAL -->
+                    <div class="contato-card">
+
+                        <span class="contato-card-tag">
+                            ATENDIMENTO JP
+                        </span>
+
+                        <h3>
+                            Seu próximo elétrico
+                            pode começar por aqui.
+                        </h3>
+
+                        <p>
+                            Entre em contato com nossa equipe,
+                            tire suas dúvidas e conheça melhor
+                            os modelos disponíveis.
+                        </p>
+
+
+                        <div class="contato-vantagens">
+
+                            <span>✓ Assistência técnica própria</span>
+
+                            <span>✓ Garantia com nota fiscal</span>
+
+                            <span>✓ Entregamos para todo o Brasil</span>
+
+                        </div>
+
+
+                        <a href="https://wa.me/553898941134" target="_blank" rel="noopener noreferrer"
+                            class="btn-contato">
+                            Chamar no WhatsApp
+                        </a>
+
+                    </div>
+
+                </div>
+
+            </div>
+
+        </section>
+
+    </main>
+
+    <!-- =========================
+        MODAL DETALHES DO VEÍCULO
+        ========================= -->
+
+    <div class="modal-produto" id="modal-produto">
+
+        <div class="modal-overlay" id="modal-overlay"></div>
+
+        <div class="modal-container">
+
+            <button class="modal-fechar" id="modal-fechar" type="button" aria-label="Fechar detalhes">
+                ×
+            </button>
+
+            <!-- IMAGEM -->
+            <div class="modal-imagem">
+
+                <img id="modal-imagem" src="" alt="">
+
+            </div>
+
+            <!-- INFORMAÇÕES -->
+            <div class="modal-info">
+
+                <span class="modal-categoria" id="modal-categoria">
+                </span>
+
+                <h2 id="modal-nome"></h2>
+
+                <p class="modal-descricao">
+                    Conheça os principais detalhes
+                    deste modelo elétrico.
+                </p>
+
+                <!-- ESPECIFICAÇÕES -->
+                <div class="modal-specs">
+
+                    <div class="modal-spec">
+                        <span>⚡ Potência</span>
+                        <strong id="modal-potencia"></strong>
+                    </div>
+
+                    <div class="modal-spec">
+                        <span>🔋 Bateria</span>
+                        <strong id="modal-bateria"></strong>
+                    </div>
+
+                    <div class="modal-spec">
+                        <span>🛣️ Autonomia</span>
+                        <strong id="modal-autonomia"></strong>
+                    </div>
+
+                    <div class="modal-spec">
+                        <span>↩️ Marcha ré</span>
+                        <strong id="modal-re"></strong>
+                    </div>
+
+                </div>
+
+                <!-- ESPECIFICAÇÕES EXTRAS -->
+                <div class="modal-specs-extras" id="modal-specs-extras">
+                </div>
+
+                <!-- CORES -->
+                <div class="modal-cores">
+
+                    <span class="modal-label">
+                        Cores disponíveis
+                    </span>
+
+                    <div class="modal-cores-lista" id="modal-cores">
+                    </div>
+
+                </div>
+
+                <!-- BOTÃO -->
+                <a href="#contato" class="modal-interesse" id="modal-interesse">
+                    Tenho interesse neste modelo
+                </a>
+
+            </div>
+
+        </div>
+
+    </div>
+
+
+    <!-- =========================================
+     RODAPÉ JP VEÍCULOS
+========================================= -->
+
+    <footer class="footer">
+        <div class="container footer-container">
+
+            <!-- SOBRE A LOJA -->
+            <div class="footer-coluna footer-marca">
+                <img src="assets/img/logo/logo.png" alt="JP Veículos" class="footer-logo">
+
+                <p>
+                    Mobilidade elétrica com tecnologia,
+                    economia e praticidade para o seu dia a dia.
+                </p>
+            </div>
+
+            <!-- LINKS RÁPIDOS -->
+            <div class="footer-coluna">
+                <h3>Links rápidos</h3>
+
+                <nav class="footer-links">
+                    <a href="#inicio">Início</a>
+                    <a href="#destaques">Destaques</a>
+                    <a href="#catalogo">Modelos</a>
+                    <a href="#sobre">Sobre nós</a>
+                    <a href="#contato">Contato</a>
+                </nav>
+            </div>
+
+            <!-- CONTATO -->
+            <div class="footer-coluna">
+                <h3>Fale conosco</h3>
+
+                <div class="footer-links">
+                    <a href="https://wa.me/553898941134" target="_blank" rel="noopener noreferrer">
+                        WhatsApp
+                    </a>
+
+                    <a href="https://www.instagram.com/veiculosjp.bm/" target="_blank" rel="noopener noreferrer">
+                        Instagram
+                    </a>
+
+                    <p>
+                        Av. Bias Fortes, 174 - Centro<br>
+                        Brasília de Minas - MG
+                    </p>
+                </div>
+            </div>
+
+        </div>
+
+        <!-- PARTE INFERIOR -->
+        <div class="footer-bottom">
+            <div class="container footer-bottom-container">
+
+                <p>
+                    © 2026 JP Veículos.
+                    Todos os direitos reservados.
+                </p>
+
+                <p>
+                    Desenvolvido por
+                    <a href="https://github.com/mateusguanabara" target="_blank" rel="noopener noreferrer">
+                        Mateus Miranda
+                    </a>
+                    • Desenvolvedor Web
+                </p>
+
+            </div>
+        </div>
+    </footer>
+
+
+    <script src="js/produtos.js"></script>
+    <script src="js/script.js"></script>
+
+</body>
+
+</html>
